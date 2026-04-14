@@ -11,10 +11,7 @@ phases:
 
   post_build:
     commands:
-      - aws cloudformation package \
-        --template template.yml \
-        --s3-bucket $S3Bucket \
-        --output-template package.yml
+      - aws cloudformation package --template template.yml --s3-bucket $S3Bucket --output-template package.yml
 
 artifacts:
   files:
